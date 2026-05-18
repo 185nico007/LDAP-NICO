@@ -1,0 +1,142 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=nicodaw,dc=local> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# nicodaw.local
+dn: dc=nicodaw,dc=local
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: nicodaw
+dc: nicodaw
+
+# users, nicodaw.local
+dn: ou=users,dc=nicodaw,dc=local
+objectClass: organizationalUnit
+ou: users
+
+# groups, nicodaw.local
+dn: ou=groups,dc=nicodaw,dc=local
+objectClass: organizationalUnit
+ou: groups
+
+# alan, users, nicodaw.local
+dn: uid=alan,ou=users,dc=nicodaw,dc=local
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Alan Arrua
+uid: alan
+uidNumber: 1002
+gidNumber: 5001
+homeDirectory: /home/alan
+loginShell: /bin/bash
+shadowLastChange: 0
+shadowMax: 99999
+shadowWarning: 7
+
+# nico, users, nicodaw.local
+dn: uid=nico,ou=users,dc=nicodaw,dc=local
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Nico
+uid: nico
+uidNumber: 1005
+gidNumber: 5002
+homeDirectory: /home/nico
+loginShell: /bin/bash
+shadowLastChange: 0
+shadowMax: 99999
+shadowWarning: 7
+
+# joako, users, nicodaw.local
+dn: uid=joako,ou=users,dc=nicodaw,dc=local
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Joako Gutierrez
+uid: joako
+uidNumber: 1003
+gidNumber: 5001
+homeDirectory: /home/joako
+loginShell: /bin/bash
+shadowLastChange: 0
+shadowMax: 99999
+shadowWarning: 7
+
+# marti, users, nicodaw.local
+dn: uid=marti,ou=users,dc=nicodaw,dc=local
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Marti Puigvi
+uid: marti
+uidNumber: 1001
+gidNumber: 5001
+homeDirectory: /home/marti
+loginShell: /bin/bash
+shadowLastChange: 0
+shadowMax: 99999
+shadowWarning: 7
+
+# roger, users, nicodaw.local
+dn: uid=roger,ou=users,dc=nicodaw,dc=local
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Roger Trulls
+uid: roger
+uidNumber: 1006
+gidNumber: 5002
+homeDirectory: /home/roger
+loginShell: /bin/bash
+shadowLastChange: 0
+shadowMax: 99999
+shadowWarning: 7
+
+# jhensen, users, nicodaw.local
+dn: uid=jhensen,ou=users,dc=nicodaw,dc=local
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Jhensen
+uid: jhensen
+uidNumber: 1004
+gidNumber: 5002
+homeDirectory: /home/jhensen
+loginShell: /bin/bash
+shadowLastChange: 0
+shadowMax: 99999
+shadowWarning: 7
+
+# marketing, groups, nicodaw.local
+dn: cn=marketing,ou=groups,dc=nicodaw,dc=local
+objectClass: top
+objectClass: posixGroup
+cn: marketing
+gidNumber: 5002
+
+# development, groups, nicodaw.local
+dn: cn=development,ou=groups,dc=nicodaw,dc=local
+objectClass: top
+objectClass: posixGroup
+cn: development
+gidNumber: 5001
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 12
+# numEntries: 11
